@@ -1,6 +1,6 @@
 import React from 'react'
 import {Form, Input} from 'antd'
-import {Button} from '../../../components'
+import {Button, ShadowBlock} from '../../../components'
 import {UserOutlined, LockOutlined} from '@ant-design/icons'
 import {Store} from 'antd/lib/form/interface'
 import {NavLink} from 'react-router-dom'
@@ -22,35 +22,33 @@ const LoginForm: React.FC<TProps> = () => {
           Пожалуйста, войдите в свой аккаунт
         </p>
       </div>
-      <Form
-        name='normal_login'
-        className='login-form'
-        initialValues={{remember: true}}
-        onFinish={onFinish}
-      >
-        <Form.Item
-          name='username'
-          rules={[{required: true, message: 'Пожалуйста введите почту!'}]}
-        >
-          <Input prefix={<UserOutlined className='site-form-item-icon'/>} placeholder='Email'/>
-        </Form.Item>
-        <Form.Item
-          name='password'
-          rules={[{required: true, message: 'Пожалуйста введите пароль!'}]}
-        >
-          <Input
-            prefix={<LockOutlined className='site-form-item-icon'/>}
-            type='password'
-            placeholder='Пароль'
-          />
-        </Form.Item>
-        <Form.Item>
-          <Button classN='button--large' size='large'>Войти в аккаунт</Button>
-          <div className='or-register'>
-            <NavLink to='/register'>Зарегистрироваться!</NavLink>
-          </div>
-        </Form.Item>
-      </Form>
+      <ShadowBlock>
+        <Form
+          name='normal_login'
+          className='login-form'
+          initialValues={{remember: true}}
+          onFinish={onFinish}>
+          <Form.Item
+            name='username'
+            rules={[{required: true, message: 'Пожалуйста введите почту!'}]}>
+            <Input prefix={<UserOutlined className='site-form-item-icon'/>} placeholder='Email'/>
+          </Form.Item>
+          <Form.Item
+            name='password'
+            rules={[{required: true, message: 'Пожалуйста введите пароль!'}]}>
+            <Input
+              prefix={<LockOutlined className='site-form-item-icon'/>}
+              type='password'
+              placeholder='Пароль'/>
+          </Form.Item>
+          <Form.Item>
+            <Button classN='button--large' size='large'>Войти в аккаунт</Button>
+            <div className='or-register'>
+              <NavLink to='/register'>Зарегистрироваться!</NavLink>
+            </div>
+          </Form.Item>
+        </Form>
+      </ShadowBlock>
     </>
   )
 }
