@@ -1,0 +1,49 @@
+.auth {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__info {
+    text-align: center;
+    margin-bottom: 40px;
+    &-title {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.13px;
+      opacity: 0.5;
+    }
+  }
+
+  .button {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    background: #4CA5FF;
+    border-radius: 4px;
+  }
+  
+  .block {
+    max-width: 430px;
+    width: 100%;
+    .button--large {
+      margin-bottom: 40px;
+    }
+    .or-register {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: .12px;
+      color: #adadad;
+      float: right;
+      opacity: .5;
+    }
+  }
+  .ant-input {
+    padding: 5px !important;
+  }
+}
