@@ -1,0 +1,61 @@
+@import '~antd/dist/antd.css';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  font-size: 15px;
+  line-height: 24px;
+  color: #093130;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+input {
+  display: block;
+}
+
+button {
+  &:disabled {
+    color: #898989;
+  }
+}
+
+//Global style
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
