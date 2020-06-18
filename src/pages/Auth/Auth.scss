@@ -43,6 +43,29 @@
       opacity: .5;
     }
   }
+
+  &__success {
+    &-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 400px;
+      text-align: center;
+      &__title {
+        font-size: 22px;
+        line-height: 25px;
+        margin: 14px 0;
+      }
+      &__text {
+        font-size: 14px;
+        line-height: 26px;
+        opacity: .5;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
   .ant-input {
     padding: 5px !important;
   }
