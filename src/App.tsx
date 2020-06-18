@@ -1,12 +1,17 @@
 import React from 'react'
-import {Auth} from './pages'
+import {Route, Switch} from 'react-router-dom'
+import {Auth, Home} from './pages'
 
 type TProps = {}
 
 const App: React.FC<TProps> = () => {
   return (
     <div className='app'>
-      <Auth/>
+      <Switch>
+        <Route exact path={['/', '/login']} render={() => <Auth/>}/>
+        <Route exact path={['/', '/home']} render={() => <Home/>}/>
+      </Switch>
+
     </div>
   )
 }
