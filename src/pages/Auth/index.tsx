@@ -1,6 +1,5 @@
 import React from 'react'
-import {ShadowBlock} from '../../components'
-import {LoginForm} from '../../modules'
+import {LoginForm, RegisterForm} from '../../modules'
 import {Route, Switch} from 'react-router-dom'
 import './Auth.scss'
 
@@ -11,12 +10,11 @@ const Auth: React.FC<TProps> = () => {
   return (
     <section className='auth'>
       <div className='content'>
-        <ShadowBlock>
-          <Switch>
-            <Route exact to='/auth' render={() => <LoginForm/>}/>
-          </Switch>
-        </ShadowBlock>
-
+        <Switch>
+          <Route exact path={['/', '/login']} render={() => <LoginForm/>}/>
+          <Route exact path='/register' render={() => <RegisterForm/>}/>
+          <Route path='*' render={() => <div className='fzf'>404 NOT FOUND</div>}/>
+        </Switch>
       </div>
     </section>
   )
