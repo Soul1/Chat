@@ -8,8 +8,9 @@ const App: React.FC<TProps> = () => {
   return (
     <div className='app'>
       <Switch>
-        <Route exact path={['/', '/login']} render={() => <Auth/>}/>
+        <Route exact path={['/', '/login', '/register']} render={() => <Auth/>}/>
         <Route exact path={['/', '/home']} render={() => <Home/>}/>
+        <Route path='*' render={() => <div className='fzf'>404 NOT FOUND</div>}/>
       </Switch>
 
     </div>
