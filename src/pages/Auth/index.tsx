@@ -13,7 +13,6 @@ const Auth: React.FC<TProps> = () => {
         <Switch>
           <Route exact path={['/', '/login']} render={() => <LoginForm/>}/>
           <Route exact path='/register' render={() => <RegisterForm/>}/>
-          <Route path='*' render={() => <div className='fzf'>404 NOT FOUND</div>}/>
         </Switch>
       </div>
     </section>
